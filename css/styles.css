@@ -1,0 +1,377 @@
+:root {
+  --hero-gap: 60px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  font-family: "Lora", serif;
+  overflow-x: hidden;
+}
+
+header {
+  background-color: #333;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  color: white;
+  font-size: 1.2rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #f4a261;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 50px;
+}
+
+h1 {
+  font-size: calc(0.5rem + 8vmin);
+  font-weight: 600;
+  font-style: italic;
+}
+
+h2 {
+  font-size: calc(0.8rem + 4vmin);
+  font-weight: 600;
+  font-style: italic;
+  line-height: 1.2;
+}
+
+p {
+  font-size: calc(0.8rem + 1.25vmin);
+  line-height: 1.65;
+}
+
+.parallax-wrapper {
+  min-height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  perspective: 10px;
+}
+
+.parallax-content {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - var(--hero-gap));
+}
+
+.hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  height: 100vh;
+}
+
+.hero img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.hero .hero__title {
+  color: white;
+  z-index: 2;
+  text-align: center;
+  transform: translateZ(-2px) scale(1.2);
+}
+
+.main-content {
+  position: relative;
+  margin: 0 auto;
+  padding: var(--hero-gap) 2rem;
+  max-width: 725px;
+  background-color: white;
+}
+
+/* Appliquer des styles spécifiques à la page index */
+.index-page main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* Section d'introduction */
+.index-page #intro {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding: 40px;
+}
+
+.index-page #intro img {
+  width: 40%;
+  max-width: 350px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.index-page #intro div {
+  flex: 1;
+}
+
+/* Section des bienfaits */
+.index-page #bienfaits {
+  padding: 40px 20px;
+}
+
+.index-page #bienfaits ul {
+  margin-top: 20px;
+  padding-left: 20px;
+}
+
+.index-page #bienfaits li {
+  margin-bottom: 10px;
+  list-style: disc;
+}
+
+/* Galerie d'images */
+.index-page #galerie {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.index-page #galerie img {
+  max-width: 100%;
+  border-radius: 10px;
+  height: auto;
+}
+
+.index-page #galerie figcaption {
+  margin-top: 10px;
+  font-style: italic;
+  color: #666;
+}
+
+/* Section de conclusion */
+.index-page #conclusion {
+  text-align: center;
+  padding: 40px 20px;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* Styles spécifiques pour la page galerie */
+.galeri-page main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Titres des sections */
+.galeri-page h2 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+  color: #222;
+  font-weight: bold;
+}
+
+/* Galerie d'images */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  justify-items: center;
+  width: 100%;
+  max-width: 1100px;
+}
+
+/* Style des photos */
+.photo {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.photo:hover {
+  transform: scale(1.05);
+}
+
+/* Images */
+.photo img {
+  width: 100%;
+  height: auto;
+  border-bottom: 2px solid #f4a261;
+}
+
+/* Description sous chaque image */
+.photo p {
+  padding: 10px;
+  font-size: 1rem;
+  color: #333;
+  text-align: center;
+}
+
+.gallery {
+  display: grid;
+  gap: 16px;
+  padding: 20px 0;
+}
+
+/* Une seule colonne sur mobile et tablette */
+@media (max-width: 768px) {
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Plusieurs colonnes à partir du desktop */
+@media (min-width: 769px) {
+  .gallery {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
+
+.photo {
+  width: 100%;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+
+
+
+/* Nouveau style pour le header */
+
+/* Cacher la checkbox */
+.menu-toggle-checkbox {
+  display: none;
+}
+
+/* Style du bouton hamburger */
+.menu-icon {
+  display: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
+
+/* Responsive : max-width 768px */
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block;
+  }
+
+  nav {
+    position: absolute;
+    top: 65px;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    z-index: 100;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px 0;
+  }
+
+  nav ul li a {
+    font-size: 1.2rem;
+    padding: 10px;
+  }
+
+  /* Quand la checkbox est cochée, on affiche le menu */
+  .menu-toggle-checkbox:checked ~ nav {
+    display: flex;
+  }
+}
+
+
+/* Section d'introduction */
+#index #intro,
+.index-page #intro {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding: 40px;
+  flex-wrap: wrap; /* au cas où */
+}
+
+#index #intro img,
+.index-page #intro img {
+  width: 40%;
+  max-width: 350px;
+  height: auto;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+#index #intro div,
+.index-page #intro div {
+  flex: 1;
+}
+
+/* Responsive : empiler sur mobile */
+@media (max-width: 768px) {
+  #index #intro,
+  .index-page #intro {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+
+  #index #intro img,
+  .index-page #intro img {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  #index #intro div,
+  .index-page #intro div {
+    width: 100%;
+  }
+}

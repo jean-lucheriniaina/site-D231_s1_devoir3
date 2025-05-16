@@ -1,0 +1,125 @@
+@media print {
+    :root {
+      --hero-gap: 0px; /* Réduire l'écart pour l'impression */
+    }
+  
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: "Lora", serif;
+    }
+  
+    html, body {
+      overflow-x: hidden;
+      line-height: 1.6;
+      color: #333;
+    }
+  
+    header, footer {
+      display: none; /* Masquer l'en-tête et le pied de page */
+    }
+  
+    main {
+      width: 100%;
+      margin: 0 auto;
+      padding: 20px;
+    }
+  
+    .hero {
+      display: none; /* Masquer l'image de fond de la section hero */
+    }
+  
+    .index-page #intro,
+    .index-page #bienfaits,
+    .index-page #galerie,
+    .index-page #conclusion {
+      padding: 20px 0;
+    }
+  
+    .index-page #intro {
+      display: block;
+    }
+  
+    .index-page #intro img {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      border-radius: 0;
+    }
+  
+    .index-page #bienfaits ul {
+      padding-left: 20px;
+    }
+  
+    .index-page #bienfaits li {
+      list-style-type: disc;
+    }
+  
+    .index-page #galerie img {
+      width: 100%;
+      height: auto;
+      margin-bottom: 10px;
+    }
+  
+    .index-page #galerie figcaption {
+      margin-top: 5px;
+      font-style: italic;
+      color: #666;
+    }
+  
+    .index-page #conclusion {
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+  
+    /* Styles spécifiques pour la page galerie */
+    .galeri-page main {
+      max-width: 100%;
+      padding: 20px;
+      text-align: left;
+    }
+  
+    .gallery {
+      display: block;
+      grid-template-columns: 1fr; /* Convertir la galerie en une seule colonne */
+      gap: 10px;
+      justify-items: stretch;
+    }
+  
+    .photo {
+      display: block;
+      width: 100%;
+      box-shadow: none; /* Supprimer l'ombre pour l'impression */
+      border-radius: 0;
+    }
+  
+    .photo img {
+      width: 100%;
+      height: auto;
+      border: none; /* Supprimer la bordure sous l'image */
+    }
+  
+    .photo p {
+      padding: 5px;
+      font-size: 1rem;
+      color: #333;
+      text-align: left;
+    }
+  
+    /* Supprimer les effets de survol pour l'impression */
+    .photo:hover {
+      transform: none;
+    }
+  
+    .gallery__caption {
+      display: none; /* Masquer la légende dans l'impression */
+    }
+  
+    /* Réduire la taille des images dans les galeries */
+    .gallery__image {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+  

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Les Règles du Football</title>
+  <meta name="description" content="Découvrez les règles essentielles du football : du but aux hors-jeu, en passant par les fautes et les coups de pied arrêtés.">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header>
+    <h1>Bienvenue sur mon site Football</h1>
+  
+    <!-- Checkbox cachée pour gérer l'état du menu -->
+    <input type="checkbox" id="menu-toggle" class="menu-toggle-checkbox" />
+    <label for="menu-toggle" class="menu-icon">&#9776;</label>
+  
+    <nav class="nav-links">
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="regles.html">Les Règles</a></li>
+        <li><a href="galerie.html">Galerie</a></li>
+        <li><a href="contacts.html">Contacts</a></li>
+      </ul>
+  </nav>
+  </header>
+
+  <main class="main-content">
+    <section>
+      <h2>Contactez le Webmaster</h2>
+      <p>Pour toute question, suggestion ou problème technique, veuillez utiliser les informations ci-dessous ou remplir le formulaire de contact.</p>
+
+      <div style="margin: 30px 0;">
+        <p><strong>📧 Email :</strong>webmaster@example.com</p>
+        <p><strong>📞 Téléphone :</strong> +33 6 12 34 56 78</p>
+        <p><strong>📍 Adresse :</strong> 123 Rue du Web, 75000 Paris, France</p>
+        <p><strong>🕐 Horaires :</strong> Lundi - Vendredi : 9h - 18h</p>
+      </div>
+
+      <form action="mailto:webmaster@example.com" method="post" enctype="text/plain" style="margin-bottom: 40px;">
+        <div style="margin-bottom: 20px;">
+          <label for="nom">Nom :</label><br>
+          <input type="text" id="nom" name="nom" required style="width: 100%; padding: 10px; font-family: 'Lora', serif;">
+        </div>
+
+        <div style="margin-bottom: 20px;">
+          <label for="email">Email :</label><br>
+          <input type="email" id="email" name="email" required style="width: 100%; padding: 10px; font-family: 'Lora', serif;">
+        </div>
+
+        <div style="margin-bottom: 20px;">
+          <label for="message">Message :</label><br>
+          <textarea id="message" name="message" rows="6" required style="width: 100%; padding: 10px; font-family: 'Lora', serif;"></textarea>
+        </div>
+
+        <button type="submit" style="padding: 10px 20px; background-color: #333; color: white; border: none; font-size: 1rem; cursor: pointer;">Envoyer</button>
+      </form>
+
+      <p style="font-size: 0.9rem; color: #555;">
+        🔒 Les informations fournies via ce formulaire sont confidentielles. Elles ne seront jamais partagées sans votre accord.
+      </p>
+
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2025 Mon Site Web sur le Football. Tous droits réservés.</p>
+    <p>Source des images : <a href="https://unsplash.com/">Unsplash</a></p>
+  </footer>
+</body>
+</html>
